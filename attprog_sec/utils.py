@@ -25,9 +25,9 @@ def plot_clustering(data,clusters):
         cluster_ids = cluster_data[:, 0].astype(int)
         cluster_colors = [id_color_dict[cluster_id] for cluster_id in cluster_ids]
         ax.scatter(cluster_data[:, 2], cluster_data[:, 1], c=cluster_colors, alpha=0.5, label=f'Cluster {i+1}')
-    ax.legend(loc='lower right')
-    ax.set_xlabel('Longitudine')
-    ax.set_ylabel('Latitudine')
+    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+    ax.set_xlabel('Longitude')
+    ax.set_ylabel('Latitude')
     plt.show()
 
 
@@ -49,9 +49,9 @@ def plot_clustering_with_centroids(data,clusters,centroids):
         cluster_colors = [id_color_dict[cluster_id] for cluster_id in cluster_ids]
         ax.scatter(cluster_data[:, 2], cluster_data[:, 1], c=cluster_colors, alpha=0.5, label=f'Cluster {i+1}')
         ax.scatter(centroids[i][2], centroids[i][1], c='red', marker='x', s=200)  # disegna il centroide come un punto rosso
-    ax.legend(loc='lower right')
-    ax.set_xlabel('Longitudine')
-    ax.set_ylabel('Latitudine')
+    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+    ax.set_xlabel('Longitude')
+    ax.set_ylabel('Latitude')
     plt.show()
 
 def plot_two(data1, data2, clusters1, clusters2):
@@ -83,7 +83,7 @@ def plot_two(data1, data2, clusters1, clusters2):
         cluster_color = cluster_colors2[i % len(cluster_colors2)]  # Cycle through black and brown colors
         ax.scatter(cluster_data[:, 2], cluster_data[:, 1], c=cluster_color, alpha=0.5, label=f'Cluster 2-{i+1}')
 
-    ax.legend(loc='lower right')
+    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
     ax.set_xlabel('Longitude')
     ax.set_ylabel('Latitude')
 
@@ -110,7 +110,7 @@ def plot_clustering_event(data,clusters):
         cluster_ids = cluster_data[:, 4].astype(int)
         cluster_colors = [ev_color_dict[cluster_id] for cluster_id in cluster_ids]
         ax.scatter(cluster_data[:, 2], cluster_data[:, 1], c=cluster_colors, alpha=0.5, label=f'Cluster {i+1}')
-    ax.legend(loc='lower right')
-    ax.set_xlabel('Longitudine')
-    ax.set_ylabel('Latitudine')
+    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+    ax.set_xlabel('Longitude')
+    ax.set_ylabel('Latitude')
     plt.show()
