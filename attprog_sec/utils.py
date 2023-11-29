@@ -5,9 +5,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import csv
 from geopy.distance import distance, geodesic
+import math
 
 
-
+'''
+---------------------------------
+Graphs 
+---------------------------------
+'''
 def plot_clustering(data,clusters):
 # Otteniamo i dati come array NumPy 
     data_array = np.array(data)
@@ -91,8 +96,6 @@ def plot_two(data1, data2, clusters1, clusters2):
     plt.show()
 
 
-#plotting dove si utilizza l'event typer per scegliere i colori
-
 def plot_clustering_event(data,clusters):
 # Otteniamo i dati come array NumPy 
     data_array = np.array(data)
@@ -114,3 +117,63 @@ def plot_clustering_event(data,clusters):
     ax.set_xlabel('Longitude')
     ax.set_ylabel('Latitude')
     plt.show()
+
+
+'''
+---------------------------------
+Functions
+---------------------------------
+'''
+
+
+def letter_to_binary(letter):
+    unicode_value = ord(letter)
+    binary_representation = bin(unicode_value)[2:]  # Remove the prefix '0b'
+    return binary_representation
+
+
+def binary_to_float(binary):
+    decimal_value = int(binary, 2)
+    return float(decimal_value)
+
+# Function to Calculate New Coordinates (Latitude and Longitude) Given Starting Coordinates
+def nuove_coordinate(latitudine, longitudine):
+    mean = 0  # Mean of the Gaussian Distribution
+    std_deviation = 1
+    variazione_metri = np.random.normal(mean, std_deviation) * 100 #modified from 100 to 500, 500 no res, try 1000
+    metri_per_grado_lat = 111320.0 
+    metri_per_grado_long = 111320.0 * np.cos(np.radians(latitudine/1e7)) 
+    variazione_gradi = variazione_metri / metri_per_grado_lat
+    variazione_gradi_long = variazione_metri / metri_per_grado_long
+  
+    # Calculate the new coordinates
+    nuova_latitudine = round(latitudine + variazione_gradi*1e7)
+    nuova_longitudine = round(longitudine + variazione_gradi_long*1e7)
+
+    return nuova_latitudine, nuova_longitudine
+
+
+
+def calcola_distanza(lat1, lon1, lat2, lon2):
+    raggio_terrestre = 6371.0
+    lat1 = math.radians(lat1)
+    lon1 = math.radians(lon1)
+    lat2 = math.radians(lat2)
+    lon2 = math.radians(lon2)
+    
+    delta_lat = lat2 - lat1
+    delta_lon = lon2 - lon1
+    a = math.sin(delta_lat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(delta_lon / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    distanza = raggio_terrestre * c
+
+    return distanza
+
+
+
+def trova_valore_piu_vicino(cam_data, target_simulation_time):
+    cam_data['time_difference'] = np.abs(cam_data['simulationTime'] - target_simulation_time)
+    valore_piu_vicino = cam_data.loc[cam_data['time_difference'].idxmin()]
+
+    return valore_piu_vicino['simulationTime']
+
