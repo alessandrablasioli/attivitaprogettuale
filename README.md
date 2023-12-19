@@ -47,7 +47,7 @@ This project was developed as part of a university project at the University of 
 
 If you wish to contribute, please reach out to the author for further information and guidance.
 
-Contact: [Alessandra Blasioli](alessandra.blasioli@studio.unibo.it)
+Contact: [Alessandra Blasioli](mailto:alessandra.blasioli@studio.unibo.it)
 
 ## Contact
 
