@@ -26,13 +26,13 @@ To utilize this project, follow these steps:
    Clone or download the repository to your local machine using the following command:
 
 
-        git clone <https://github.com/alessandrablasioli/attivitaprogettuale.git>
+        git clone https://github.com/alessandrablasioli/attivitaprogettuale.git
 
 3. **Navigate to the Directory:**
 Open a terminal or command prompt and move into the downloaded directory:
 
 
-        cd </attprog_sec>
+        cd /attprog_sec
 
 4. **Run the Notebook:**
 Execute the Jupyter Notebook named `notebook.ipynb` by running:
