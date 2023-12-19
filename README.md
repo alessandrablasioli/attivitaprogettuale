@@ -3,7 +3,7 @@
 This study explores vehicular communication systems' potential for enhancing road safety and reducing traffic congestion. By leveraging two initial datasets representing Cooperative Awareness Messages (CAM) and Decentralized Environmental Notification Messages (DENM), the research focuses on data preprocessing, clustering, and the development of a system to identify potential malicious outliers.
 
 To open the notebook in colab click here
-<a target="_blank" href="https://colab.research.google.com/github/alessandrablasioli/attivitaprogettuale/blob/main/attprog_sec/finito.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/alessandrablasioli/attivitaprogettuale/blob/main/attprog_sec/notebook.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
