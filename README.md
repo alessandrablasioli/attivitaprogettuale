@@ -1,7 +1,6 @@
 ## Clustering and Labeling of a V2V Communication Dataset based on CAM and DENM Messages with Malicious Data Injection: Analysis and Implications
 
-This study explores vehicular communication systems' potential for enhancing road safety and reducing traffic congestion. By leveraging two initial datasets representing Cooperative Awareness Messages (CAM) and Decentralized Environmental Notification Messages (DENM), the research focuses on data preprocessing, clustering, and the development of a system to identify potential malicious outliers.
-
+This study explores the potential of vehicular communication systems to enhance road safety and alleviate traffic congestion. By leveraging two initial datasets representing Cooperative Awareness Messages (CAM) and Decentralized Environmental Notification Messages (DENM), the research focuses on data preprocessing, contamination, clustering, and labeling. The ultimate goal is to develop a system based on unsupervised learning that can proficiently identify potential malicious outliers within the datasets. This work aims to investigate the application of these techniques and understand how they can be harnessed in the context of vehicular communication.
 To open the notebook in colab click here
 <a target="_blank" href="https://colab.research.google.com/github/alessandrablasioli/attivitaprogettuale/blob/main/attprog_sec/notebook.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
