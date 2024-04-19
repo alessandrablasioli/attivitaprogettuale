@@ -15,7 +15,7 @@ To open the notebook in colab click here
 
 ## Description
 
-To read a detailed explanation of the project open [the report](https://github.com/alessandrablasioli/sicurezza_informatica_projectwork/blob/main/Clustering_and_Labeling_of_a_V2V_Communication_Dataset_based_on_CAM_and_DENM_Messages_with_Malicious_Data_Injection__Analysis_and_Implications%20(11).pdf).
+To read a detailed explanation of the project open [the report](https://github.com/alessandrablasioli/sicurezza_informatica_projectwork/blob/main/Clustering_and_Labeling_of_a_V2V_Communication_Dataset_based_on_CAM_and_DENM_Messages_with_Malicious_Data_Injection__Analysis_and_Implications%20(11).pdf). Alternatively, take a look at the [the presentation](https://github.com/alessandrablasioli/sicurezza_informatica_projectwork/blob/main/Clustering%20and%20Labeling%20of%20a%20V2V%20Communication%20Dataset%20(3).pdf) to get a general idea of the project.
 
 ## Usage
 
